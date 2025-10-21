@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshminarasimha Swamy Vithanala - B.Tech Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        .accent-color {
+            color: #64ffda;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #64ffda;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .glass-effect {
+            background: rgba(23, 42, 69, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.5em;
+            background-color: #64ffda;
+            animation: blink 0.7s infinite;
+            margin-left: 4px;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold accent-color">LSV</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills & Certs</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 nav-link text-center">About</a>
+            <a href="#skills" class="block py-2 nav-link text-center">Skills & Certs</a>
+            <a href="#projects" class="block py-2 nav-link text-center">Projects</a>
+            <a href="#contact" class="block py-2 nav-link text-center">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+        <section id="home" class="min-h-screen flex items-center justify-center text-center scroll-fade">
+            <div>
+                <h1 class="text-lg md:text-xl accent-color mb-4">Hello, my name is</h1>
+                <h2 class="text-4xl md:text-6xl font-bold text-slate-100">Lakshminarasimha Swamy Vithanala.</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-slate-400 mt-2">
+                    An Aspiring <span id="typewriter"></span><span class="typewriter-cursor"></span>
+                </h3>
+                <p class="mt-6 max-w-2xl mx-auto text-slate-400">
+                    I'm a final year B.Tech student at CMR Engineering College, passionate about software development and building innovative solutions. I'm actively seeking opportunities to apply my skills.
+                </p>
+                <div class="mt-8 flex justify-center items-center space-x-4">
+                    <a href="https://github.com/VithanalaLakshminarasimhaSwamy" target="_blank" class="text-slate-400 hover:accent-color transition-colors" aria-label="GitHub">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lakshminarasimha-swamy-v/" target="_blank" class="text-slate-400 hover:accent-color transition-colors" aria-label="LinkedIn">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                    </a>
+                    <a href="#contact" class="inline-block bg-transparent border-2 border-sky-400 text-sky-400 font-medium py-2 px-6 rounded-md hover:bg-sky-400 hover:text-slate-900 transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="pt-10 pb-20 md:pt-16 md:pb-32 scroll-fade">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-100"><span class="accent-color">01.</span> About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3 text-slate-400 space-y-4 text-lg">
+                    <p>
+                        Hello! I'm a final year student at CMR Engineering College, pursuing my B.Tech in Computer Science. My journey in technology has been driven by a deep curiosity for problem-solving and a passion for building software that can make a difference.
+                    </p>
+                    <p>
+                        I have a strong foundation in programming and web technologies, with a particular interest in the ServiceNow platform and full-stack development. I enjoy taking on challenging projects that allow me to learn and grow as a developer.
+                    </p>
+                    <p>
+                        As I approach graduation, I'm excited to transition into a full-time software engineering role where I can contribute to a dynamic team, tackle real-world challenges, and help create impactful technology.
+                    </p>
+                </div>
+                <div class="md:col-span-2 flex justify-center">
+                    <div class="w-64 h-64 rounded-full overflow-hidden relative group">
+                        <img src="https://image2url.com/images/1761043747700-e45712e6-794e-4aaf-a674-ee028bcd817d.jpg" alt="A portrait of Lakshminarasimha Swamy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-135">
+                        <div class="absolute inset-0 bg-sky-400/30 rounded-full group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="resume" class="py-20 md:py-32 text-center scroll-fade">
+    <h2 class="text-3xl font-bold mb-4 text-slate-100"><span class="accent-color">02.</span> Resume</h2>
+    <h3 class="text-4xl font-bold mb-6 text-slate-100">My Resume</h3>
+    <p class="max-w-xl mx-auto text-slate-400 mb-8">
+        You can view or download my resume to know more about my skills, experience, and projects.
+    </p>
+    <div class="flex justify-center space-x-4">
+        <a href="https://drive.google.com/file/d/1V9kvCIIkhVV4sWCuSzkjfbR1rstqq2Ui/view?usp=sharing" target="_blank" class="inline-block bg-sky-400 text-slate-900 font-bold py-4 px-8 rounded-lg hover:bg-sky-300 transition-colors">
+            View Resume
+        </a>
+    
+    </div>
+</section>
+
+
+        <section id="skills" class="py-20 md:py-32 scroll-fade">
+            <h2 class="text-3xl font-bold mb-16 text-center text-slate-100"><span class="accent-color">03.</span> Skills & Certifications</h2>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-slate-300">Technical Skills</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center max-w-3xl mx-auto">
+                    <div class="flex flex-col items-center p-4 rounded-lg hover:bg-slate-800 transition-colors">
+                        <svg class="w-16 h-16 mb-2 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8zm4.1-12.3L12 9.85l-4.1-4.15a.49.49 0 0 0-.7 0a.49.49 0 0 0 0 .7L11.3 10.2l-3.9 3.9a.49.49 0 0 0 0 .7a.49.49 0 0 0 .7 0l3.9-3.9l3.9 3.9a.49.49 0 0 0 .7 0a.49.49 0 0 0 0-.7L12.7 10.2l4.1-4.15a.49.49 0 0 0 0-.7a.49.49 0 0 0-.7 0z"></path></svg>
+                        <span class="font-semibold text-slate-200">Java</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 rounded-lg hover:bg-slate-800 transition-colors">
+                        <svg class="w-16 h-16 mb-2 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M16.89 15.13c-.87-.44-1.33-1.41-1.33-2.43c0-1.02.46-1.99 1.33-2.43l1.89-1l-1.25-2.16l-1.89 1c-.87.44-1.99.44-2.86 0l-1.89-1l-1.25 2.16l1.89 1c.87.44 1.33 1.41 1.33 2.43c0 1.02-.46 1.99-1.33 2.43l-1.89 1l1.25 2.16l1.89-1c.87-.44 1.99-.44 2.86 0l1.89 1l1.25-2.16l-1.89-1zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8z"></path></svg>
+                        <span class="font-semibold text-slate-200">Python</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 rounded-lg hover:bg-slate-800 transition-colors">
+                        <svg class="w-16 h-16 mb-2 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-10 10a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M8 7h3v10H8zm5 0h3v10h-3z"></path></svg>
+                        <span class="font-semibold text-slate-200">HTML</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 rounded-lg hover:bg-slate-800 transition-colors">
+                        <svg class="w-16 h-16 mb-2 text-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M10,8V10H14V8L16,10.5L14,13V11H8V13L6,10.5L8,8H10M14,14V16H10V14L8,16.5L10,19V17H16V15L18,17.5L16,20V18H14Z"></path></svg>
+                        <span class="font-semibold text-slate-200">ServiceNow</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 text-center text-slate-300">Certifications</h3>
+                 <div class="max-w-3xl mx-auto space-y-6">
+                <a href="https://drive.google.com/file/d/1vkBdKDvRpv_sVcCLaH8y9tAP6Ma78sFk/view" target="_blank" class="glass-effect p-6 rounded-lg flex items-center space-x-4 hover:shadow-lg transition-shadow">
+    <svg class="w-10 h-10 text-sky-400 flex-shrink-0" ...></svg>
+    <div>
+        <h4 class="font-bold text-lg text-slate-100">Certified System Administrator (CSA)</h4>
+        <p class="text-slate-400">ServiceNow</p>
+    </div>
+</a>
+
+                <a href="https://drive.google.com/file/d/1aedLyWUT4kr5kpSPyRYFKttJCNwoz81D/view" target="_blank" class="glass-effect p-6 rounded-lg flex items-center space-x-4 hover:shadow-lg transition-shadow">
+    <svg class="w-10 h-10 text-sky-400 flex-shrink-0" ...></svg>
+    <div>
+        <h4 class="font-bold text-lg text-slate-100">Certified Application Developer (CAD)</h4>
+        <p class="text-slate-400">ServiceNow</p>
+    </div>
+</a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 md:py-32 scroll-fade">
+            <h2 class="text-3xl font-bold mb-12 text-center text-slate-100"><span class="accent-color">04.</span> My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="glass-effect rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://techniblogs.com/wp-content/uploads/2024/05/AI-Fraud-Detection-for-ecommerce-770x470.png" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">Multi-Perspective Fraud Detection</h3>
+                        <p class="text-slate-400 mb-4">Developed a system to detect fraudulent activities by analyzing data from multiple perspectives and sources to improve accuracy.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://github.com/VithanalaLakshminarasimhaSwamy" target="_blank" class="text-slate-400 hover:accent-color" aria-label="GitHub Link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect rounded-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://th.bing.com/th/id/OIP.Gn712xKTrIAHQRygzWOBkgHaD4?w=335&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">Online Recruitment Fraud Detection</h3>
+                        <p class="text-slate-400 mb-4">An ongoing project to identify and flag fraudulent job postings using deep learning models to protect job seekers.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Deep Learning</span>
+                            <span class="bg-slate-700 text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Ongoing</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="https://github.com/VithanalaLakshminarasimhaSwamy" target="_blank" class="text-slate-400 hover:accent-color" aria-label="GitHub Link"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 md:py-32 text-center scroll-fade">
+             <h2 class="text-3xl font-bold mb-4 text-slate-100"><span class="accent-color">05.</span> What's Next?</h2>
+            <h3 class="text-4xl font-bold mb-4 text-slate-100">Get In Touch</h3>
+            <p class="max-w-xl mx-auto text-slate-400 mb-8">
+                I'm actively looking for full-time Software Engineer roles and would love to connect. My inbox is always open, whether you have an opportunity, a question, or just want to say hi!
+            </p>
+            <a href="mailto:lakshminarasimhaswamyvithanala@gmail.com?subject=Reaching Out from Your Portfolio" class="inline-block bg-sky-400 text-slate-900 font-bold py-4 px-8 rounded-lg hover:bg-sky-300 transition-colors">
+    Say Hello
+</a>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center text-slate-500">
+        <p>Designed & Built by Lakshminarasimha Swamy Vithanala</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Header Shadow on Scroll ---
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-lg');
+                } else {
+                    header.classList.remove('shadow-lg');
+                }
+            });
+            
+            // --- Typewriter Effect ---
+            const typewriterElement = document.getElementById('typewriter');
+            const words = ["Software Engineer.", "Web Developer.", "ServiceNow Developer."];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                if (isDeleting) {
+                    typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    setTimeout(() => isDeleting = true, 2000);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                }
+
+                const typeSpeed = isDeleting ? 100 : 200;
+                setTimeout(type, typeSpeed);
+            }
+            type();
+
+            // --- Scroll Fade-in Effect ---
+            const fadeElems = document.querySelectorAll('.scroll-fade');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElems.forEach(elem => {
+                observer.observe(elem);
+            });
+
+            // --- Active Nav Link on Scroll ---
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
